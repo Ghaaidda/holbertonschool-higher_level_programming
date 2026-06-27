@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This is my list module that contains a class MyList that inherits 
+from the built-in list class and adds a method to print the list in sorted order.
+"""
 class MyList(list):
     """ Class that inherits the attributes references of class list
 
@@ -12,4 +16,3 @@ class MyList(list):
         l_sorted = self.copy()
         l_sorted.sort()
         print(l_sorted)
-        
