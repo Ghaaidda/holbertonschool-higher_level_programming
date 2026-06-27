@@ -4,7 +4,9 @@
 """Defines a class MyList that inherits from class List."""
 
 class MyList(List):
-    """Class MyList definition."""
+    """Class MyList definition.
+        Args:
+        list: class list"""
     def print_sorted(self):
         """Print a list in sorted ascending order."""
         print(sorted(self))
