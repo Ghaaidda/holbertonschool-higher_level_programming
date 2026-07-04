@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 # 0-read_file.py
 # Alsabti ghaida
-"""Defines a text file-reading function."""
+"""Module for reading a text file."""
 
 
 def read_file(filename=""):
-    """Print the contents of a UTF8 text file to stdout."""
-    with open(filename, encoding="utf-8") as f:
-        print(f.read(), end="")
+    """Reads a UTF-8 text file and prints its contents to stdout."""
+    with open(filename, "r", encoding="utf-8") as file:
+        print(file.read(), end="")
