@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 9-student.py
-# Alsabti ghaida
 """ Module that defines the class Student
 """
 

@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 0-read_file.py
-# Alsabti ghaida
 """Module for reading a text file."""
 
 

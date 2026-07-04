@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 7-add_item.py
-# Alsabti ghaida
 """ Module that adds all arguments to a Python list, and then
 save them to a file
 """

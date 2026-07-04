@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 4-from_json_string.py
-# Alsabti ghaida
 """ Module that contains a function that returns an object by
 a JSON representation
 """

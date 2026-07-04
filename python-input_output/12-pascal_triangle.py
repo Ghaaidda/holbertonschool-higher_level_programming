@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 12-pascal_triangle.py
-# Alsabti ghaida
 """Module that defines Pascal's Triangle."""
 
 

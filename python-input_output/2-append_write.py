@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 2-append_write.py
-# Alsabti ghaida
 """Module for appending text to a UTF-8 file."""
 
 

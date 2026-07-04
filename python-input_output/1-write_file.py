@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-# 1-write_file.py
-# Alsabti ghaida
 """Module for writing text to a UTF-8 file."""
 
 
