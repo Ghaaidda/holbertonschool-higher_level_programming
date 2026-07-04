@@ -15,3 +15,4 @@ class Student:
     def to_json(self):
         """ Method that returns directory description """
         return self.__dict__.copy()
+        
