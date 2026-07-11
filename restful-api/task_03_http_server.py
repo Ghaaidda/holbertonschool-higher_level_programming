@@ -11,10 +11,30 @@ class SimpleAPI_Handler(http.server.BaseHTTPRequestHandler):
         """
         Handles GET requests by sending a 200 OK response and a simple message.
         """
-        self.send_response(200)
-        self.send_header("Content-type", "text/plain")
-        self.end_headers()
-        self.wfile.write(b"Hello, this is a simple API!")
+        if self.path == "/":
+            self.send_response(200)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"Hello, this is a simple API!")
+
+        elif self.path == "/data":
+            self.send_response(200)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            self.wfile.write(b'{"name": "John", "age": 30, "city": "New York"}')
+        
+        elif self.path == "/status":
+            self.send_response(200)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            self.wfile.write(b'{"status": "OK"}')
+
+        else:
+            self.send_response(404)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"404 Not Found")
+
 
 if __name__ == "__main__":
     """
