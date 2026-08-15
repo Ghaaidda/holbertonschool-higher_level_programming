@@ -5,14 +5,16 @@ def generate_invitations(template, attendees):
     Generates invitations from a predefined template.
     """
     if not isinstance(template, str) or not isinstance(attendees, list):
-        raise TypeError("Error: Invalid input types.")
+        print("Error: Invalid input types.")
+        return
 
     if not template:
-        raise ValueError("Template is empty, no output files generated.")
-
+        print("Template is empty, no output files generated.")
+        return
+    
     if not attendees:
-        raise ValueError("No data provided, no output files generated.")
-
+        print("No data provided, no output files generated.")
+        return
 
     for ind, attendee in enumerate(attendees):
         try:
