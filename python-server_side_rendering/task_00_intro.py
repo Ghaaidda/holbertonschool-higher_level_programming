@@ -7,16 +7,24 @@ def generate_invitations(template, attendees):
     if not isinstance(template, str) or not isinstance(attendees, list):
         raise TypeError("Error: Invalid input types.")
 
-    if not template or not attendees:
-        raise ValueError("Error: Template and attendees list cannot be empty.")
+    if not template:
+        raise ValueError("Template is empty, no output files generated.")
+
+    if not attendees:
+        raise ValueError("No data provided, no output files generated.")
 
 
     for ind, attendee in enumerate(attendees):
         try:
-            invitation = template.replace("{name}", attendee['name'])
-            invitation = invitation.replace("{event_title}", attendee['event_title'])
-            invitation = invitation.replace("{event_location}", attendee['event_location'])
-            invitation = invitation.replace("{event_date}", attendee['event_date'])
+            name = attendee.get('name', 'N/A')
+            event_title = attendee.get('event_title', 'N/A')
+            event_location = attendee.get('event_location', 'N/A')
+            event_date = attendee.get('event_date', 'N/A')
+
+            invitation = template.replace("{name}", name)
+            invitation = invitation.replace("{event_title}", event_title)
+            invitation = invitation.replace("{event_location}", event_location)
+            invitation = invitation.replace("{event_date}", event_date)
 
             if not os.path.exists(f"output_{ind}.txt"):
                 with open(f"output_{ind}.txt", "x") as f:
