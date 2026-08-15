@@ -16,6 +16,7 @@ def generate_invitations(template, attendees):
             invitation = template.replace("{name}", attendee['name'])
             invitation = invitation.replace("{event_title}", attendee['event_title'])
             invitation = invitation.replace("{event_location}", attendee['event_location'])
+            invitation = invitation.replace("{event_date}", attendee['event_date'])
 
             if not os.path.exists(f"output_{ind}.txt"):
                 with open(f"output_{ind}.txt", "x") as f:
