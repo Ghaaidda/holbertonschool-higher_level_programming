@@ -1,0 +1,1 @@
+This directory contains all tasks of the Everything is an Object project.
